@@ -36,7 +36,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     
     // Revenue Analysis
     Route::get('/analytics/revenue', [FranchiseController::class, 'getRevenueReport']);
-});
+
     Route::post('/auth/logout', [AuthController::class, 'logout']);
     
     // Franchise APIs
