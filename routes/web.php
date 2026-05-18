@@ -18,6 +18,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/devices', 'App\Http\Controllers\Web\DeviceWebController@index')->name('devices.index');
     Route::post('/devices', 'App\Http\Controllers\Web\DeviceWebController@store')->name('devices.store');
     Route::delete('/devices/{device}', 'App\Http\Controllers\Web\DeviceWebController@destroy')->name('devices.destroy');
+
+    // Client Management
+    Route::get('/clients', 'App\Http\Controllers\Web\ClientWebController@index')->name('clients.index');
+    Route::delete('/clients/{session}', 'App\Http\Controllers\Web\ClientWebController@destroy')->name('clients.kick');
+
     Route::get('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@index')->name('vouchers.index');
     Route::post('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@store')->name('vouchers.store');
     Route::delete('/vouchers/{voucher}', 'App\Http\Controllers\Web\VoucherWebController@destroy')->name('vouchers.destroy');
