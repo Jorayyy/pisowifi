@@ -45,4 +45,16 @@ class VoucherWebController extends Controller
         $voucher->delete();
         return back()->with('success', 'Voucher deleted successfully!');
     }
+
+    public function bulkDestroy(Request $request)
+    {
+        $request->validate([
+            'ids' => 'required|array',
+            'ids.*' => 'exists:vouchers,id',
+        ]);
+
+        Voucher::whereIn('id', $request->ids)->delete();
+
+        return back()->with('success', count($request->ids) . ' vouchers deleted successfully!');
+    }
 }

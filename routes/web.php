@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@index')->name('vouchers.index');
     Route::post('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@store')->name('vouchers.store');
+    Route::delete('/vouchers/bulk', 'App\Http\Controllers\Web\VoucherWebController@bulkDestroy')->name('vouchers.bulk_destroy');
     Route::delete('/vouchers/{voucher}', 'App\Http\Controllers\Web\VoucherWebController@destroy')->name('vouchers.destroy');
 });
 

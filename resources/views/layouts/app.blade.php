@@ -9,7 +9,7 @@
 <body class="bg-gray-100 uppercase text-xs font-bold tracking-wider">
     <nav class="bg-blue-800 p-4 text-white shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl">PISO WIFI CLOUD</h1>
+            <h1 class="text-xl">ABELLA'S PISO WIFI</h1>
             <div class="space-x-6 flex items-center">
                 <a href="{{ url('/') }}" class="hover:text-blue-300">DASHBOARD</a>
                 <a href="{{ url('/franchises') }}" class="hover:text-blue-300">FRANCHISES</a>
