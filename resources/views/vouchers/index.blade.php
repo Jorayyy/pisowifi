@@ -118,11 +118,8 @@
         </form>
     </div>
 </div>
-@endsection
-        </div>
-        <div class="mt-6">
-            {{ $vouchers->links() }}
-        </div>
-    </div>
+
+<div class="mt-6 uppercase text-[10px] font-bold">
+    {{ $vouchers->links() }}
 </div>
 @endsection
