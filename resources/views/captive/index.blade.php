@@ -26,7 +26,7 @@
                 <svg class="w-12 h-12 text-white/10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"></path></svg>
             </div>
             <h1 class="text-3xl font-extrabold tracking-tight">ABELLA'S</h1>
-            <p class="text-blue-100/80 text-xs font-bold uppercase tracking-[0.3em] mt-1">Free WiFi Access</p>
+            <p class="text-blue-100/80 text-xs font-bold uppercase tracking-[0.3em] mt-1">Premium High-Speed WiFi</p>
         </div>
         
         <div class="p-10 box-border">
