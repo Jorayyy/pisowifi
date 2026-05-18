@@ -14,7 +14,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/franchises', 'App\Http\Controllers\Web\FranchiseWebController@store')->name('franchises.store');
     Route::delete('/franchises/{franchise}', 'App\Http\Controllers\Web\FranchiseWebController@destroy')->name('franchises.destroy');
 
-    Route::get('/devices', 'App\Http\Controllers\Web\DeviceWebController@index');
+    // Device Management
+    Route::get('/devices', 'App\Http\Controllers\Web\DeviceWebController@index')->name('devices.index');
+    Route::post('/devices', 'App\Http\Controllers\Web\DeviceWebController@store')->name('devices.store');
+    Route::delete('/devices/{device}', 'App\Http\Controllers\Web\DeviceWebController@destroy')->name('devices.destroy');
     Route::get('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@index')->name('vouchers.index');
     Route::post('/vouchers', 'App\Http\Controllers\Web\VoucherWebController@store')->name('vouchers.store');
     Route::delete('/vouchers/{voucher}', 'App\Http\Controllers\Web\VoucherWebController@destroy')->name('vouchers.destroy');
