@@ -26,4 +26,9 @@ class Franchise extends Model
     {
         return $this->hasMany(Device::class);
     }
+
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class);
+    }
 }
