@@ -12,8 +12,8 @@
             <h1 class="text-xl">PISO WIFI CLOUD</h1>
             <div class="space-x-6 flex items-center">
                 <a href="{{ url('/') }}" class="hover:text-blue-300">DASHBOARD</a>
-                <a href="{{ url('/franchises') }}" class="hover:text-blue-300">BRANCHES</a>
-                <a href="{{ url('/devices') }}" class="hover:text-blue-300">DEVICES</a>
+                <a href="{{ url('/franchises') }}" class="hover:text-blue-300">FRANCHISES</a>
+                <a href="{{ url('/devices') }}" class="hover:text-blue-300">BRANCHES</a>
                 <a href="{{ url('/clients') }}" class="hover:text-blue-300">CLIENTS</a>
                 <a href="{{ url('/vouchers') }}" class="hover:text-blue-300">VOUCHERS</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">

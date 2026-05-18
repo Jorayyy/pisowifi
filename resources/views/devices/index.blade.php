@@ -5,7 +5,7 @@
     <!-- Registration Form -->
     <div class="lg:col-span-1">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 sticky top-6">
-            <h3 class="text-sm font-black text-gray-400 uppercase mb-4 italic">Register Device</h3>
+            <h3 class="text-sm font-black text-gray-400 uppercase mb-4 italic">Register Branch Machine</h3>
             <form action="{{ route('devices.store') }}" method="POST" class="space-y-4">
                 @csrf
                 <div>
@@ -17,7 +17,7 @@
                     <input type="text" name="serial_number" placeholder="PISO-XXXX" required class="w-full bg-gray-50 border-none rounded-xl p-3 text-sm font-mono focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Assign to Branch</label>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Assign to Franchise</label>
                     <select name="franchise_id" required class="w-full bg-gray-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-500">
                         @foreach($franchises as $franchise)
                             <option value="{{ $franchise->id }}">{{ $franchise->name }}</option>
@@ -31,11 +31,11 @@
         </div>
     </div>
 
-    <!-- Device List -->
+    <!-- Branch Machine List -->
     <div class="lg:col-span-3">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-sm font-black text-gray-400 uppercase italic">Fleet Overview</h3>
+                <h3 class="text-sm font-black text-gray-400 uppercase italic">Branch Management</h3>
                 @if(session('success'))
                     <span class="text-xs bg-green-100 text-green-600 px-3 py-1 rounded-full font-bold">{{ session('success') }}</span>
                 @endif
@@ -45,8 +45,8 @@
                 <table class="w-full text-left">
                     <thead>
                         <tr class="text-[10px] font-black text-gray-400 uppercase tracking-widest border-b">
-                            <th class="pb-3 text-left">NAME & SERIAL</th>
-                            <th class="pb-3 text-left">BRANCH</th>
+                            <th class="pb-3 text-left">BRANCH NAME & SERIAL</th>
+                            <th class="pb-3 text-left">FRANCHISE</th>
                             <th class="pb-3 text-center">STATUS</th>
                             <th class="pb-3 text-right">LAST PING</th>
                             <th class="pb-3 text-right">ACTIONS</th>
