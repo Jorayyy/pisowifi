@@ -29,7 +29,7 @@
             <p class="text-blue-100/80 text-xs font-bold uppercase tracking-[0.3em] mt-1">Premium High-Speed WiFi</p>
         </div>
         
-        <div class="p-10 box-border">
+        <div class="p-10 box-border" x-data="{ tab: 'insert' }">
             <div class="mb-8 text-center flex items-center justify-center space-x-3 bg-slate-50 py-3 rounded-2xl border border-slate-100">
                 <div class="w-2 h-2 bg-green-500 rounded-full glow animate-ping"></div>
                 <div>
@@ -39,7 +39,7 @@
             </div>
 
             <!-- Tabs -->
-            <div class="flex mb-8 bg-slate-100 p-1.5 rounded-2xl" x-data="{ tab: 'insert' }">
+            <div class="flex mb-8 bg-slate-100 p-1.5 rounded-2xl">
                 <button 
                     @click="tab = 'insert'" 
                     :class="tab === 'insert' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500'"
@@ -55,7 +55,6 @@
             </div>
 
             <div x-data="{ 
-                tab: 'insert',
                 isInserting: false,
                 coins: 0,
                 startInserting() {
