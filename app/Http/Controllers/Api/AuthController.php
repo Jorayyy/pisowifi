@@ -12,11 +12,16 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $request->validate([
+        $rules = [
             'email' => 'required|email',
             'password' => 'required',
-            'device_name' => 'required',
-        ]);
+        ];
+
+        if ($request->expectsJson()) {
+            $rules['device_name'] = 'required';
+        }
+
+        $request->validate($rules);
 
         $user = User::where('email', $request->email)->first();
 
