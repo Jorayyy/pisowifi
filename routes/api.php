@@ -26,8 +26,17 @@ Route::post('/vouchers/validate', [VoucherController::class, 'validateVoucher'])
 // Payment Webhooks
 Route::post('/payments/gcash/webhook', [PaymentController::class, 'gcashWebhook']);
 
+// Enterprise Management API
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user', [AuthController::class, 'me']);
+    
+    // Remote Commands
+    Route::post('/device/command', [DeviceController::class, 'sendCommand']);
+    Route::get('/device/metrics', [DeviceController::class, 'getMetrics']);
+    
+    // Revenue Analysis
+    Route::get('/analytics/revenue', [FranchiseController::class, 'getRevenueReport']);
+});
     Route::post('/auth/logout', [AuthController::class, 'logout']);
     
     // Franchise APIs
